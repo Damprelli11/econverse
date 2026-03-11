@@ -2,6 +2,8 @@ import { useEffect, useState } from "react"
 import productsData from "../data/products.json"
 import type { Product } from "../types/Product"
 
+import ProductCard from "../components/ProductCard/ProductCard"
+
 const Home = () => {
     const [products, setProducts] = useState<Product[]>([])
 
@@ -13,24 +15,12 @@ const Home = () => {
         <main>
             <section>
                 <h2>Produtos relacionados</h2>
-
                 <div className="products-grid">
                     {products.map((product, index) => (
-                        <article key={index} className="product-card">
-                            <img
-                                src={product.photo}
-                                alt={product.productName}
-                                width="150"
-                            />
-
-                            <p>{product.descriptionShort}</p>
-
-                            <span className="price">
-                                R$ {product.price.toFixed(2)}
-                            </span>
-
-                            <button>COMPRAR</button>
-                        </article>
+                        <ProductCard
+                            key={index}
+                            product={product}
+                        />
                     ))}
                 </div>
             </section>
