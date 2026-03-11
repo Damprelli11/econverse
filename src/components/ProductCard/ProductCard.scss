@@ -1,0 +1,46 @@
+.product-card {
+  background: white;
+  border-radius: 8px;
+  color: #3F3F40;
+  padding: 16px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+.product-image {
+  width: 150px;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+.product-description {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.product-button {
+  background: #3442B5;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
