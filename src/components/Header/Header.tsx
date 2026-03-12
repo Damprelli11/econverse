@@ -5,6 +5,7 @@ import heartIcon from "../../assets/heart.svg"
 import profileIcon from "../../assets/profile.svg"
 import cartIcon from "../../assets/cart.svg"
 import searchIcon from "../../assets/search.svg"
+import Logo from "../../assets/logo.png"
 
 const Header = () => {
     return (
@@ -22,13 +23,11 @@ const Header = () => {
 
                 {/* LOGO */}
                 <div className="logo">
-                    <span className="logo-circle">ec</span>
-                    <span className="logo-text">onverse</span>
+                    <img src={Logo} alt="Logo Econverse" />
                 </div>
 
                 {/* SEARCH */}
                 <div className="search">
-
                     <input
                         type="text"
                         placeholder="O que você está buscando?"
@@ -39,20 +38,14 @@ const Header = () => {
                         alt="Buscar"
                         className="search-icon"
                     />
-
                 </div>
 
                 {/* ICONES */}
                 <div className="icons">
-
                     <img src={packageIcon} alt="Pedidos" />
-
                     <img src={heartIcon} alt="Favoritos" />
-
                     <img src={profileIcon} alt="Perfil" />
-
                     <img src={cartIcon} alt="Carrinho" />
-
                 </div>
 
             </div>
