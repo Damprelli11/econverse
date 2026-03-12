@@ -7,6 +7,11 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ product, onClick }: ProductCardProps) => {
+    const formattedPrice = product.price.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL",
+    })
+
     return (
         <article className="product-card" onClick={onClick}>
             <img
@@ -19,11 +24,20 @@ const ProductCard = ({ product, onClick }: ProductCardProps) => {
                 {product.descriptionShort}
             </p>
 
-            <span className="product-price">
-                R$ {product.price.toFixed(2)}
-            </span>
+            <p className="product-old-price">R$ 30,90</p>
 
-            <button className="product-button">
+            <span className="product-price">{formattedPrice}</span>
+
+            <p className="product-installments">
+                ou 2x de R$ 49,95 sem juros
+            </p>
+
+            <p className="product-shipping">Frete grátis</p>
+
+            <button
+                type="button"
+                className="product-button"
+            >
                 COMPRAR
             </button>
         </article>

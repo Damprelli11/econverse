@@ -4,7 +4,6 @@ import productsData from "../data/products.json"
 import type { Product } from "../types/Product"
 
 import HeroBanner from "../components/HeroBanner/HeroBanner"
-
 import ProductCard from "../components/ProductCard/ProductCard"
 import ProductModal from "../components/ProductModal/ProductModal"
 
@@ -20,8 +19,21 @@ const Home = () => {
         <main>
             <HeroBanner />
 
-            <section>
-                <h2>Produtos relacionados</h2>
+            <section className="products-section">
+                <div className="products-title">
+                    <span className="products-title-line"></span>
+                    <h2>Produtos relacionados</h2>
+                    <span className="products-title-line"></span>
+                </div>
+
+                <div className="products-tabs">
+                    <button className="active">CELULAR</button>
+                    <button>ACESSÓRIOS</button>
+                    <button>TABLETS</button>
+                    <button>NOTEBOOKS</button>
+                    <button>TVS</button>
+                    <button>VER TODOS</button>
+                </div>
 
                 <div className="products-grid">
                     {products.map((product, index) => (
