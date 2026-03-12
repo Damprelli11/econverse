@@ -95,18 +95,39 @@
 }
 
 .menu ul {
-  max-width: 1200px;
-  margin: auto;
-
   display: flex;
-  justify-content: space-between;
+  gap: 20px;
 
-  padding: 12px;
-  list-style: none;
+  overflow-x: auto;
 
-  font-size: 14px;
+  padding: 10px 15px;
+
+  font-size: 13px;
+
+  scrollbar-width: none;
+}
+
+.menu ul::-webkit-scrollbar {
+  display: none;
+}
+
+.menu li {
+  white-space: nowrap;
+  cursor: pointer;
 }
 
 .highlight {
-  color: blue;
+  color: #2f5bea;
+  font-weight: 600;
+}
+
+@media (min-width: 1024px) {
+
+  .menu ul {
+    justify-content: space-between;
+    overflow: visible;
+    max-width: 1200px;
+    margin: auto;
+  }
+
 }
