@@ -8,6 +8,8 @@ import CategorySection from "../components/CategorySection/CategorySection"
 import ProductCard from "../components/ProductCard/ProductCard"
 import PartnerSection from "../components/PartnerSection/PartnerSection"
 import BrandSection from "../components/BrandSection/BrandSection"
+import Newsletter from "../components/Newsletter/Newsletter"
+import Footer from "../components/Footer/Footer"
 import ProductModal from "../components/ProductModal/ProductModal"
 
 const Home = () => {
@@ -51,6 +53,8 @@ const Home = () => {
 
             <PartnerSection />
             <BrandSection />
+            <Newsletter/>
+            <Footer/>
 
             <ProductModal
                 product={selectedProduct}
