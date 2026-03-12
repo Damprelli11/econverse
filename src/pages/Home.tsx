@@ -6,6 +6,7 @@ import type { Product } from "../types/Product"
 import HeroBanner from "../components/HeroBanner/HeroBanner"
 import CategorySection from "../components/CategorySection/CategorySection"
 import ProductCard from "../components/ProductCard/ProductCard"
+import PartnerSection from "../components/PartnerSection/PartnerSection"
 import ProductModal from "../components/ProductModal/ProductModal"
 
 const Home = () => {
@@ -46,6 +47,8 @@ const Home = () => {
                     ))}
                 </div>
             </section>
+
+            <PartnerSection />
 
             <ProductModal
                 product={selectedProduct}

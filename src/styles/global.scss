@@ -94,9 +94,9 @@ body {
     border-right: 1px solid #dedede;
   }
 
-  .products-tabs button:nth-child(3n) {
+  /*.products-tabs button:nth-child(3n) {
     border-right: none;
-  }
+  }*/
 
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
