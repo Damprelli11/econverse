@@ -11,7 +11,7 @@ const ProductCard = ({ product, onClick }: ProductCardProps) => {
         <article className="product-card" onClick={onClick}>
             <img
                 src={product.photo}
-                alt={product.productName}
+                alt={`Imagem do produto ${product.productName}`}
                 className="product-image"
             />
 

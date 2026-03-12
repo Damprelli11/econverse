@@ -10,7 +10,7 @@ const ProductModal = ({ product, onClose }: ProductModalProps) => {
     if (!product) return null
 
     return (
-        <div className="modal-overlay">
+        <div className="modal-overlay" onClick={onClose}>
             <div className="modal-content">
 
                 <button className="modal-close" onClick={onClose}>
