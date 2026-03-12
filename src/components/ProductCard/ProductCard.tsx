@@ -3,11 +3,12 @@ import "./ProductCard.scss"
 
 interface ProductCardProps {
     product: Product
+    onClick: () => void
 }
 
-const ProductCard = ({ product }: ProductCardProps) => {
+const ProductCard = ({ product, onClick }: ProductCardProps) => {
     return (
-        <article className="product-card">
+        <article className="product-card" onClick={onClick}>
             <img
                 src={product.photo}
                 alt={product.productName}
