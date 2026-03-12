@@ -3,6 +3,8 @@ import productsData from "../data/products.json"
 
 import type { Product } from "../types/Product"
 
+import HeroBanner from "../components/HeroBanner/HeroBanner"
+
 import ProductCard from "../components/ProductCard/ProductCard"
 import ProductModal from "../components/ProductModal/ProductModal"
 
@@ -16,6 +18,8 @@ const Home = () => {
 
     return (
         <main>
+            <HeroBanner />
+
             <section>
                 <h2>Produtos relacionados</h2>
 
