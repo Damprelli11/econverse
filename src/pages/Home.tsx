@@ -7,6 +7,7 @@ import HeroBanner from "../components/HeroBanner/HeroBanner"
 import CategorySection from "../components/CategorySection/CategorySection"
 import ProductCard from "../components/ProductCard/ProductCard"
 import PartnerSection from "../components/PartnerSection/PartnerSection"
+import BrandSection from "../components/BrandSection/BrandSection"
 import ProductModal from "../components/ProductModal/ProductModal"
 
 const Home = () => {
@@ -49,6 +50,7 @@ const Home = () => {
             </section>
 
             <PartnerSection />
+            <BrandSection />
 
             <ProductModal
                 product={selectedProduct}
