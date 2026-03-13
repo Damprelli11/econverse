@@ -1,91 +1,114 @@
 .newsletter {
-    background: #2d1f53;
-    padding: 40px 20px;
+  background: #271c47;
+  margin-top: 56px;
+  padding: 28px 0;
+}
+
+.newsletter__content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.newsletter__text h2 {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.newsletter__text p {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 420px;
+}
+
+.newsletter__form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.newsletter__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.newsletter__inputs input {
+  width: 100%;
+  height: 42px;
+  border: none;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 0 14px;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  outline: none;
+}
+
+.newsletter__inputs input::placeholder {
+  color: #8f8f8f;
+}
+
+.newsletter__inputs button {
+  width: 100%;
+  height: 42px;
+  border: none;
+  border-radius: 8px;
+  background: #f7ca11;
+  color: #271c47;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.newsletter__terms {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.newsletter__terms input {
+  width: 14px;
+  height: 14px;
+  accent-color: #f7ca11;
+}
+
+@media (min-width: 1024px) {
+  .newsletter {
+    margin-top: 64px;
+    padding: 34px 0;
   }
-  
-  .newsletter__container {
-    max-width: 1200px;
-    margin: auto;
-  
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+
+  .newsletter__content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
   }
-  
-  .newsletter__text h2 {
-    color: white;
-    font-size: 24px;
-    font-weight: 700;
+
+  .newsletter__text {
+    max-width: 420px;
   }
-  
-  .newsletter__text p {
-    color: #cfcfe0;
-    font-size: 14px;
-    font-weight: 100;
-    margin-top: 6px;
-    max-width: fit-content;
-  }
-  
-  /* FORM */
-  
+
   .newsletter__form {
-    display: flex;
-    flex-direction: column;
+    flex: 1;
+    max-width: 680px;
+  }
+
+  .newsletter__inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 140px;
     gap: 10px;
   }
-  
-  .newsletter__inputs {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-  
-  .newsletter__inputs input {
-    height: 40px;
-    padding: 0 12px;
-    border-radius: 6px;
-    border: none;
-  
-    font-family: "Poppins";
-  }
-  
+
   .newsletter__inputs button {
-    height: 40px;
-    padding: 0 20px;
-  
-    border: none;
-    border-radius: 6px;
-  
-    background: #f7ca11;
-    color: #271c47;
-    font-family: 'Poppins','san-serif';
-    font-weight: 600;
-    cursor: pointer;
+    width: 100%;
   }
-  
-  /* CHECKBOX */
-  
-  .newsletter__terms {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  
-    color: white;
-    font-size: 12px;
-  }
-  
-  /* DESKTOP */
-  
-  @media (min-width: 1024px) {
-  
-    .newsletter__container {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-  
-    .newsletter__text {
-      max-width: 410px;
-    }
-  
-  }
+}

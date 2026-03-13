@@ -1,6 +1,6 @@
 .hero {
   width: 100%;
-  min-height: 320px;
+  min-height: 420px;
 
   background-size: cover;
   background-position: center;
@@ -12,43 +12,39 @@
 }
 
 .hero-overlay {
-  position: absolute;
-
-  top: 0;
-  left: 0;
-
   width: 100%;
-  height: 100%;
+  //height: 100%;
+  height:-webkit-fill-available;
 
-  background: linear-gradient(90deg,
-      rgba(0, 0, 0, 0.75) 0%,
-      rgba(0, 0, 0, 0.5) 40%,
-      rgba(0, 0, 0, 0) 70%);
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,0.75) 0%,
+    rgba(0,0,0,0.5) 40%,
+    rgba(0,0,0,0) 70%
+  );
 
   display: flex;
   align-items: center;
 }
 
 .hero-content {
-  max-width: 1200px;
-  margin: auto;
-  padding: 40px 20px;
+  max-width: 520px;
+  padding: 80px 0;
+
   color: white;
-  position: absolute;
-  margin-left: 5%;
-  z-index: 2;
 }
 
 .hero-content h1 {
-  font-size: 36px;
+  font-size: 42px;
   font-weight: 600;
   line-height: 1.2;
 }
 
 .discount {
   margin: 15px 0;
-  font-size: 18px;
-}
+  font-size: 26px;
+  font-weight: 100;
+} 
 
 .discount span {
   color: #ffc107;
@@ -64,25 +60,8 @@
   margin-top: 5%;
   border-radius: 6px;
 
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
 
   cursor: pointer;
-}
-
-/*DESKTOP*/
-@media (min-width: 1024px) {
-
-  .hero {
-    min-height: 480px;
-  }
-
-  .hero-content h1 {
-    font-size: 48px;
-  }
-
-  .discount {
-    font-size: 30px;
-  }
-
 }
