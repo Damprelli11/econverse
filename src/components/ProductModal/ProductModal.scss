@@ -1,58 +1,182 @@
 .modal-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
 
   display: flex;
   align-items: center;
   justify-content: center;
 
+  padding: 16px;
   z-index: 1000;
 }
 
 .modal-content {
-  background: white;
-  padding: 30px;
-  color: #3F3F40;
-  font-family: 'Poppins', sans-serif;
-  border-radius: 8px;
-  width: 500px;
   position: relative;
-  text-align: center;
+
+  width: 100%;
+  max-width: 770px;
+
+  background: #ffffff;
+  border-radius: 10px;
+
+  padding: 38px 32px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  color: #3f3f40;
+  font-family: "Poppins", sans-serif;
+
   animation: modalFade 0.2s ease;
-
-}
-
-.modal-image {
-  width: 200px;
-  margin-bottom: 20px;
-}
-
-.modal-price {
-  font-size: 22px;
-  font-weight: bold;
-  display: block;
-  margin-top: 10px;
 }
 
 .modal-close {
   position: absolute;
-  right: 5px;
-  top: 5px;
-  color: #3F3F40;
+  top: 12px;
+  right: 14px;
+
   border: none;
   background: none;
-  font-size: 25px;
+
+  color: #707070;
+  font-size: 28px;
+  line-height: 1;
   cursor: pointer;
 }
 
+.modal-image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-image {
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+}
+
+.modal-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #3f3f40;
+  margin-bottom: 8px;
+}
+
+.modal-price {
+  display: block;
+  font-size: 32px;
+  font-weight: 700;
+  color: #3f3f40;
+  margin-bottom: 16px;
+}
+
+.modal-description {
+  font-size: 10px;
+  line-height: 1.6;
+  color: #9f9f9f;
+  margin-bottom: 10px;
+  max-width: 300px;
+}
+
+.modal-link {
+  font-size: 10px;
+  font-weight: 700;
+  color: #3442b5;
+  text-decoration: none;
+  margin-bottom: 22px;
+}
+
+.modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.modal-quantity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 110px;
+  height: 36px;
+
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+
+  padding: 0 10px;
+}
+
+.modal-quantity button {
+  border: none;
+  background: none;
+  color: #3f3f40;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.modal-quantity span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #3f3f40;
+}
+
+.modal-buy-button {
+  width: 100%;
+  max-width: 190px;
+  height: 40px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #f7ca11;
+  color: #271c47;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .modal-content {
+    flex-direction: row;
+    align-items: center;
+    gap: 34px;
+    padding: 40px 38px;
+  }
+
+  .modal-image-wrapper {
+    flex: 0 0 240px;
+  }
+
+  .modal-image {
+    width: 240px;
+  }
+
+  .modal-info {
+    flex: 1;
+  }
+
+  .modal-actions {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
+}
 
 @keyframes modalFade {
   from {
-    transform: scale(0.9);
+    transform: scale(0.96);
     opacity: 0;
   }
   to {
